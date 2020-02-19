@@ -1,0 +1,247 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+* {
+  box-sizing: border-box;
+}
+nav {
+  padding: 30px;
+}
+nav ul {
+  float: right;
+}
+nav ul li {
+  display: inline-block;
+  float: left;
+}
+nav ul li:not(:first-child) {
+  margin-left: 25px;
+}
+nav ul li a {
+  display: inline-block;
+  outline: none;
+  color: #1f2227;
+  font-size: 16px;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+}
+nav ul li a:hover {
+  color: #808080;
+  text-decoration: none;
+}
+@media screen and (max-width: 560px) {
+  .nav-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: #1f2227;
+    opacity: 0;
+    transition: all 0.2s ease;
+  }
+  .nav-container ul {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+  }
+  .nav-container ul li {
+    display: block;
+    float: none;
+    width: 100%;
+    text-align: right;
+    margin-bottom: 10px;
+  }
+  .nav-container ul li:nth-child(1) a {
+    transition-delay: 0.2s;
+  }
+  .nav-container ul li:nth-child(2) a {
+    transition-delay: 0.3s;
+  }
+  .nav-container ul li:nth-child(3) a {
+    transition-delay: 0.4s;
+  }
+  .nav-container ul li:nth-child(4) a {
+    transition-delay: 0.5s;
+  }
+  .nav-container ul li:not(:first-child) {
+    margin-left: 0;
+  }
+  .nav-container ul li a {
+    padding: 10px 25px;
+    opacity: 0;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 600;
+    transform: translateY(-20px);
+    transition: all 0.2s ease;
+  }
+  .nav-open {
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    display: block;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    z-index: 9999;
+    border-radius: 50%;
+  }
+  .nav-open i {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #1f2227;
+    border-radius: 2px;
+    margin-left: 14px;
+  }
+  .nav-open i:nth-child(1) {
+    margin-top: 16px;
+  }
+  .nav-open i:nth-child(2) {
+    margin-top: 4px;
+    opacity: 1;
+  }
+  .nav-open i:nth-child(3) {
+    margin-top: 4px;
+  }
+}
+#nav:checked + .nav-open {
+  transform: rotate(45deg);
+}
+#nav:checked + .nav-open i {
+  background: #fff;
+  transition: transform 0.2s ease;
+}
+#nav:checked + .nav-open i:nth-child(1) {
+  transform: translateY(6px) rotate(180deg);
+}
+#nav:checked + .nav-open i:nth-child(2) {
+  opacity: 0;
+}
+#nav:checked + .nav-open i:nth-child(3) {
+  transform: translateY(-6px) rotate(90deg);
+}
+#nav:checked ~ .nav-container {
+  z-index: 9990;
+  opacity: 1;
+}
+#nav:checked ~ .nav-container ul li a {
+  opacity: 1;
+  transform: translateY(0);
+}
+.hidden {
+  display: none;
+}
+.bg1{
+  background-image:linear-gradient(rgba(0, 0, 0, 0.733),rgba(0, 0, 0, 0.952)), url('../images/1.jpg');
+  background-size: cover;
+  min-height: 100vh;
+}
+  .hading1{
+  padding-top: 150px;
+  font-size: 3.9em;
+}
+hr{
+  width: 30%;
+}
+.buttons1{
+  margin-top: 30px;
+  
+}
+
+
+/* Services */
+
+.services h1{
+  padding-top: 40px;
+}
+#column1{
+  margin-top: 70px;
+}
+.profilo h1{
+  padding-top: 50px;
+}
+#column2{
+  margin-top: 70px;
+}
+.bg2{
+  background-image:linear-gradient(rgba(0, 0, 0, 0.733),rgba(0, 0, 0, 0.952)), url('https://assets.entrepreneur.com/content/3x2/2000/20191127190639-shutterstock-431848417-crop.jpeg?width=700&crop=2:1');
+  background-size: cover;
+  min-height: 100vh;
+  clip-path: polygon(50% 0%, 100% 0, 100% 68%, 50% 100%, 0 69%, 0 0);
+  background-attachment: fixed;
+}
+.bg2 h1{
+  padding-top: 80px;
+}
+.bg2 button{
+  margin-left: 540px;
+}
+.info h1{
+  padding-top: 70px;
+}
+.bg3{
+  background-image:linear-gradient(rgba(0, 0, 0, 0.733),rgba(0, 0, 0, 0.952)), url('https://israeltrade.org.br/wp-content/uploads/2017/02/Neg%C3%B3cios-em-Israel-e1487619113536.jpg');
+  background-size: cover;
+  min-height: 100vh;
+  clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);  background-attachment: fixed;
+}
+.bg3 h1{
+  padding-top: 140px;
+}
+.bg3 p{
+  padding-left: 250px;
+}
+.bg3 button{
+  margin-left: 540px;
+}
+.info h1{
+  padding-top: 70px;
+}
+
+.bg4{
+  background-image:linear-gradient(rgba(0, 0, 0, 0.733),rgba(0, 0, 0, 0.952)), url('../images/2.jpg');
+  background-size: cover;
+  min-height: 100vh;
+  margin-top: 100px;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+  background-attachment: fixed;
+}
+.bg4 h1{
+  padding-top: 100px;
+}
+.bg4 p{
+  padding-left: 150px;
+}
+.bg4 button{
+  margin-left: 540px;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: red; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000; 
+}
+.bg5{
+  background-image: url('https://cdn2.f-cdn.com/contestentries/1156335/14119196/59e371b1b10fc_thumb900.jpg');
+  background-size: cover;
+  min-height: 100vh;
+}
